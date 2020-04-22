@@ -1,0 +1,11 @@
+This plugin is intended to be used in QGIS.
+QGIS has the ability to create and store variables that are specific to the software in general, a loaded project or
+a specific datalayer in a project. These variables can be called upon on in all sorts of algorithm and expressions.
+
+TARGET:
+The intended purpose of this plugin is to read preset project variables at project startup.
+Then the system-user should be able to manipulate those preset-variables by use of a GUI.
+
+The intend of this project is to make a plugin that is easily changeable to the end-users needs.
+
+The plugin should be downloadable on GITHUB and distibuted in the QGIS plugin library.
