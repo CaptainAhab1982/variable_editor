@@ -3,8 +3,16 @@ QGIS has the ability to create and store variables that are specific to the soft
 a specific datalayer in a project. These variables can be called upon on in all sorts of algorithm and expressions.
 
 TARGET:
-The intended purpose of this plugin is to read preset project variables at project startup.
-Then the system-user should be able to manipulate those preset-variables by use of a GUI.
+The intended purpose of this plugin is to read a UI file when it is first used.
+The plugin should read the amount of inputfields in the UI file.
+It should add the same amount of projectvariables to the QGIS project and name them in a similar way they are named 
+in the UI. 
+
+Example: in a UI file there is a comboBox called: comboBox_delta. 
+The plugin should create a project variable called comboBox_delta. The value set as [prefix]-[value] should write to the value of the variable.
+
+Everytime the QGIS-project is opened the plugin should read the variables-values and display them when the plugin is loaded.
+So the QGIS user doesn't need to set all the values on project startup, instead the plugin uses the last know values.
 
 The intend of this project is to make a plugin that is easily changeable to the end-users needs.
 
