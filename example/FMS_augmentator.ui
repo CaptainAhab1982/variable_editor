@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>401</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_6">
+   <item>
+    <layout class="QVBoxLayout" name="vl_depth">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="lb_depth">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Depth augmentation:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="hl_medium_detail">
+       <property name="topMargin">
+        <number>3</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="lb_medium_detail">
+         <property name="text">
+          <string>Medium detail @ scale:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QgsDoubleSpinBox" name="scale_medium_detail">
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="hl_high_detail">
+       <item>
+        <widget class="QLabel" name="lb_high_detail">
+         <property name="text">
+          <string>High detail @ scale:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QgsDoubleSpinBox" name="scale_high_detail">
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="decimals">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="vl_spotsounding">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="hl_spot_visibility">
+       <item>
+        <widget class="QLabel" name="lb_spot_visibility">
+         <property name="text">
+          <string>Spotsounding visibility</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="spot_visibility">
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>0</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string>Off</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>On</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="hl_spot_notation">
+       <item>
+        <widget class="QLabel" name="lb_spot_notation">
+         <property name="text">
+          <string>Spotsounding notation</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="spot_notation">
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>0</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string>Nautical</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Meters</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_1">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="vl_area_contour">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="lb_area_contour">
+       <property name="text">
+        <string>Area and contour:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="hl_shallow">
+       <property name="topMargin">
+        <number>3</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="lb_shallow">
+         <property name="text">
+          <string>Shallow</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QgsDoubleSpinBox" name="shallow">
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="hl_safety">
+       <item>
+        <widget class="QLabel" name="lb_safety">
+         <property name="text">
+          <string>Safety</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="safety_check">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QgsDoubleSpinBox" name="safety_value">
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="hl_deep">
+       <item>
+        <widget class="QLabel" name="lb_deep">
+         <property name="text">
+          <string>Deep</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QgsDoubleSpinBox" name="deep">
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="hl_extra_contour">
+       <item>
+        <widget class="QLabel" name="lb_extra_contour">
+         <property name="text">
+          <string>Extra contour</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="extra_contour_check">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QgsDoubleSpinBox" name="extra_contour_value">
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="vl_layer_augmentation">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="lb_layer_augmentation">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Layer augmentation:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="hl_compass">
+       <property name="topMargin">
+        <number>3</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="lb_compass">
+         <property name="text">
+          <string>Compass @ sectorlight:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="compass">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="vl_printer_control">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="lb_printer_control">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Printer control</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="hl_printmode">
+       <property name="topMargin">
+        <number>3</number>
+       </property>
+       <property name="bottomMargin">
+        <number>3</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="lb_printmode">
+         <property name="text">
+          <string>Printmode:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="printmode">
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>CheckBox</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="hl_rd">
+       <item>
+        <widget class="QLabel" name="lb_grids">
+         <property name="text">
+          <string>Grids</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="grid_rd">
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>RD</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="hl_wgs84">
+       <item>
+        <widget class="QLabel" name="lb_wgs84">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="grid_wgs84">
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>WGS '84</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="hl_utm">
+       <item>
+        <widget class="QLabel" name="lb_utm">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="grid_utm">
+         <property name="minimumSize">
+          <size>
+           <width>190</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>UTM</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QgsDoubleSpinBox</class>
+   <extends>QDoubleSpinBox</extends>
+   <header>qgsdoublespinbox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>scale_medium_detail</tabstop>
+  <tabstop>scale_high_detail</tabstop>
+  <tabstop>spot_visibility</tabstop>
+  <tabstop>spot_notation</tabstop>
+  <tabstop>shallow</tabstop>
+  <tabstop>safety_check</tabstop>
+  <tabstop>safety_value</tabstop>
+  <tabstop>deep</tabstop>
+  <tabstop>extra_contour_check</tabstop>
+  <tabstop>extra_contour_value</tabstop>
+  <tabstop>compass</tabstop>
+  <tabstop>printmode</tabstop>
+  <tabstop>grid_rd</tabstop>
+  <tabstop>grid_wgs84</tabstop>
+  <tabstop>grid_utm</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

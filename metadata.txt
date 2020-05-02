@@ -1,0 +1,15 @@
+[general]
+name=VariableEditor
+description=Variable Editor
+about=About this variable editor
+tracker=https://github.com/CaptainAhab1982/variable_editor/issues
+repository=https://github.com/CaptainAhab1982/variable_editor
+homepage=https://github.com/CaptainAhab1982/variable_editor
+icon=icons/mIconVariableEditor.svg
+experimental=False
+deprecated=False
+version=1.0
+qgisMinimumVersion=3.0
+author=Fabian de Pooter, Julien Monticolo
+email=
+server=False
